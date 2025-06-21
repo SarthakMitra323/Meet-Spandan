@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet Spandan</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f0f8ff;
+      color: #333;
+    }
+    header {
+      background-color: #00bfff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #007acc;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px 0;
+    }
+    nav button {
+      background: white;
+      color: #007acc;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav button:hover {
+      background: #cceeff;
+    }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #007acc;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #00bfff;
+      color: white;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    window.onload = () => showSection('about');
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Spandan's World!</h1>
+    <p>Class 5 | Age 9+ | Math & Science Wiz | Football Star</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('sports')">Football</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <section id="about">
+    <h2>About Spandan</h2>
+    <p>Spandan is a bright and energetic student of Class 5, aged just over 9 years. Known for his curiosity and creativity, Spandan loves learning new things, especially in the world of mathematics and science. His classmates admire his dedication and friendly nature.</p>
+  </section>
+
+  <section id="skills" style="display: none;">
+    <h2>Academic Skills</h2>
+    <p><strong>Mathematics:</strong> Spandan is a quick problem-solver and enjoys solving puzzles, mental math challenges, and Olympiad-level questions.</p>
+    <p><strong>Science:</strong> Fascinated by the natural world, Spandan excels in understanding scientific concepts, conducting experiments, and exploring how things work.</p>
+  </section>
+
+  <section id="sports" style="display: none;">
+    <h2>Football Passion</h2>
+    <p>Spandan is not just great at academics, but also a skilled football player. He plays as an attacker and is known for his speed, footwork, and teamwork on the field. He dreams of representing his school in interschool competitions!</p>
+  </section>
+
+  <section id="contact" style="display: none;">
+    <h2>Contact</h2>
+    <p>If you'd like to know more about Spandan or cheer him on, reach out via email or through school events.</p>
+    <p>Email: <a href="mailto:spandan@schoolmail.com">spandan@schoolmail.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Spandan's Profile | Created with HTML & CSS
+  </footer>
+</body>
+</html>
